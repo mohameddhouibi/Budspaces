@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.Fragments.Groups.CreateModifyGroupFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/StartGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.065" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/EndGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.935" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:layout_constraintBottom_toBottomOf="@id/appBarLayout"
+            android:src="@color/new_picture_background"/>
+
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/appbar_layout"/>
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:layout_constraintStart_toStartOf="@id/picture"
+            app:layout_constraintEnd_toEndOf="@id/picture"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/ic_camera"/>
+<!--            app:layout_constraintBottom_toBottomOf="@id/picture"-->
+<!--            android:layout_marginBottom="@dimen/round_radius"-->
+
+        <TextView
+            android:id="@+id/informationsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/picture"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textSize="16sp"
+            android:textColor="@color/blue_text"
+            android:text="@string/group_informations"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/informationsTxt"
+            android:layout_marginTop="@dimen/space_40"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_check_circle_black_18dp"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/group_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            style="@style/TextInputLayoutLocationStyle"
+            android:hint="@string/location">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textMultiLine"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textMultiLine"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <carbon.widget.Button
+            android:id="@+id/cancel_action"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            app:carbon_cornerRadius="@dimen/round_radius"
+            app:carbon_elevation="@dimen/low_gap"
+            app:carbon_elevationShadowColor="@color/mainRed"
+            app:carbon_elevationSpotShadowColor="@color/mainRed"
+            app:carbon_elevationAmbientShadowColor="@color/mainRed"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toStartOf="@id/validate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            android:layout_marginEnd="@dimen/appbar_padding_top"
+            android:layout_marginTop="@dimen/big_space"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@color/white"
+            app:carbon_stroke="@color/mainRed"
+            app:carbon_strokeWidth="@dimen/carbon_1dip"
+            android:fontFamily="@font/oswald_bold"
+            android:textSize="15sp"
+            android:textColor="@color/mainRed"
+            android:textAllCaps="false"
+            android:text="@string/cancel"/>
+
+        <ProgressBar
+            android:id="@+id/groupprogress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="152dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/validate"
+            app:layout_constraintEnd_toStartOf="@+id/EndGuide"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/launch"
+            app:layout_constraintTop_toTopOf="@+id/launch" />
+        <carbon.widget.Button
+            android:id="@+id/validate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            app:carbon_cornerRadius="@dimen/round_radius"
+            app:carbon_elevation="@dimen/low_gap"
+            app:carbon_elevationShadowColor="@color/mainRed"
+            app:carbon_elevationSpotShadowColor="@color/mainRed"
+            app:carbon_elevationAmbientShadowColor="@color/mainRed"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintStart_toEndOf="@id/cancel_action"
+            app:layout_constraintTop_toTopOf="@id/cancel_action"
+            android:layout_marginStart="@dimen/appbar_padding_top"
+            android:background="@color/mainRed"
+            android:fontFamily="@font/oswald_bold"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="@string/validate"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

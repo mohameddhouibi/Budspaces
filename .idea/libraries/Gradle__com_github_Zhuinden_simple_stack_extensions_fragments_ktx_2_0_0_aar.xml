@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Zhuinden.simple-stack-extensions:fragments-ktx:2.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e53bbf1a1f0b3f0416ecb8c3390769a3/jetified-fragments-ktx-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e53bbf1a1f0b3f0416ecb8c3390769a3/jetified-fragments-ktx-2.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden.simple-stack-extensions/fragments-ktx/2.0.0/280c13161871912f7342b8569552980caf21be98/fragments-ktx-2.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden.simple-stack-extensions/fragments-ktx/2.0.0/9200a61adc8e65a7ac40e85b8149c35eba7f28a7/fragments-ktx-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

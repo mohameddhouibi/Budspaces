@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="30dp"
+    android:layout_width="30dp"
+    android:textAlignment="center"
+    android:fontFamily="@font/roboto_medium"
+    android:textSize="18sp"
+    android:textColor="@color/blue_text"/>

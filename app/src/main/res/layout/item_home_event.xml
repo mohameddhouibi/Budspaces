@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/group_activities_header_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:paddingVertical="@dimen/appbar_padding_top"
+        android:background="@color/home_new_background">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.88"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_event"/>
+
+        <TextView
+            android:id="@+id/eventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/icon"
+            app:layout_constraintBottom_toBottomOf="@id/icon"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="14sp"
+            android:textColor="@color/blue_text"
+            tools:text="Nom de l'evenement"/>
+
+        <TextView
+            android:id="@+id/eventTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/eventName"
+            app:layout_constraintStart_toStartOf="@id/eventName"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="12sp"
+            android:textColor="@color/blue_text"
+            tools:text="11 - 13 April 2020 • 10.00 AM"/>
+
+        <TextView
+            android:id="@+id/eventDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/eventTime"
+            app:layout_constraintStart_toStartOf="@id/eventName"
+            app:layout_constraintEnd_toEndOf="@id/endGuide"
+            android:layout_marginTop="@dimen/appbar_padding_top"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:textColor="@color/blue_text"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

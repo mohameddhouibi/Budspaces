@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.Fragments.MainAppBar.CalendarFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startCalGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endCalGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92"/>
+
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/appbar_layout"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="20sp"
+            android:textColor="@color/mainBlue"
+            tools:text="Avril, 2020"/>
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:padding="@dimen/appbar_padding_top"
+            android:src="@drawable/ic_calendar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gridView"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            app:layout_constraintStart_toStartOf="@id/startCalGuide"
+            app:layout_constraintEnd_toEndOf="@id/endCalGuide"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="7"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+        <carbon.widget.ConstraintLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/home_item_background"
+            app:layout_constraintBottom_toBottomOf="@id/timeline"
+            app:layout_constraintTop_toBottomOf="@id/gridView"/>
+
+        <TextView
+            android:id="@+id/eventTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/date"
+            app:layout_constraintTop_toTopOf="@id/background"
+            android:layout_marginTop="@dimen/round_radius"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="18sp"
+            android:textColor="@color/blue_text"
+            android:text="@string/events_caps"/>
+
+        <ImageView
+            android:id="@+id/moreEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/eventTxt"
+            app:layout_constraintBottom_toBottomOf="@id/eventTxt"
+            app:layout_constraintEnd_toEndOf="@id/calendar"
+            android:padding="@dimen/appbar_padding_top"
+            android:rotation="-90"
+            android:tint="@color/blue_text"
+            android:src="@drawable/expand_arrow"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/eventTxt"
+            app:layout_constraintStart_toStartOf="@id/eventTxt"
+            app:layout_constraintEnd_toEndOf="@id/calendar"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            tools:listitem="@layout/item_event_layout"
+            tools:itemCount="1"/>
+
+        <TextView
+            android:id="@+id/timelineTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/date"
+            app:layout_constraintTop_toBottomOf="@id/events"
+            android:layout_marginTop="@dimen/space_40"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="16sp"
+            android:textColor="@color/blue_text"
+            android:text="@string/timeline_fo_the_day"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timeline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/date"
+            app:layout_constraintEnd_toEndOf="@id/calendar"
+            app:layout_constraintTop_toBottomOf="@id/timelineTxt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            tools:listitem="@layout/item_timeline"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

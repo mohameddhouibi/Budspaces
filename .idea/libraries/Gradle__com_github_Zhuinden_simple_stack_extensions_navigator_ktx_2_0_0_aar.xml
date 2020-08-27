@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Zhuinden.simple-stack-extensions:navigator-ktx:2.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5f02e160bf531665c47d3405b6061ec/jetified-navigator-ktx-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5f02e160bf531665c47d3405b6061ec/jetified-navigator-ktx-2.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden.simple-stack-extensions/navigator-ktx/2.0.0/280c13161871912f7342b8569552980caf21be98/navigator-ktx-2.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden.simple-stack-extensions/navigator-ktx/2.0.0/8a6a7e467b2b4ee4d34ca60c0f85527605f22e2c/navigator-ktx-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

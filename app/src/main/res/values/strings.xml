@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">Budspaces</string>
+    <string name="places_api">AIzaSyCD-3PKqOBJMDF1WuoGE1NyAIWfKx8921I</string>
+    <string name="facebook_app_id">2713570688889331</string>
+    <string name="fb_login_protocol_scheme">fb2713570688889331</string>
+    <string name="server_client_id">483507560828-6oeguhekdln241lnq32drm5d5so0uo8g.apps.googleusercontent.com</string>
+
+    <string name="discover">Découvrir</string>
+    <string name="s_identifier">S’identifier</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="connexion">Connexion</string>
+    <string name="mdp_oublie">Mot de passe oublié ?</string>
+    <string name="pas_de_compte">Vous n’avez pas de compte?</string>
+    <string name="vous_avez_deja_un_compte">Vous avez déjà un compte ?</string>
+    <string name="recuperer">Récupérer</string>
+    <string name="s_inscrire">S’inscrire</string>
+    <string name="send_recovery_link">Envoyer le lien de récuperation</string>
+    <string name="birthday">Anniversaire</string>
+    <string name="birthdate">Date de naissance</string>
+    <string name="email">Email</string>
+    <string name="country">Pays</string>
+    <string name="old_password">Ancien Mot de passe</string>
+    <string name="new_password">Nouveau Mot de passe</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirm_password">Confirmation mot de passe</string>
+    <string name="inscription">Inscription</string>
+    <string name="name">Nom et Prénom</string>
+    <string name="genre">Genre</string>
+    <string name="man">Homme</string>
+    <string name="women">Femme</string>
+    <string name="field_cant_be_empty">Ce champ ne peut pas être vide</string>
+    <string name="incorrect_date">Date incorrecte</string>
+    <string name="invalid_email">L’addresse email n’est pas correcte</string>
+    <string name="invalid_password">Le mot de passe ne peut pas être inférieur à 8 caractères</string>
+    <string name="wrong_country">Ce pays n’existe pas</string>
+    <string name="skip">Skip</string>
+    <string name="category">Catégorie</string>
+    <string name="choose_categories">Choisissez cinq catégories représentant vos centres d’intérêts</string>
+    <string name="home">Accueil</string>
+    <string name="discussions">Discussions</string>
+    <string name="discussion">Discussion</string>
+    <string name="profile">Profile</string>
+    <string name="my_groups">Mes groupes</string>
+    <string name="post_tmp">When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us.</string>
+    <string name="notifications">Notifications</string>
+    <string name="search_filter">Filtres de recherche</string>
+    <string name="search">Recherche</string>
+    <string name="group">Groupe</string>
+    <string name="groups">Groupes</string>
+    <string name="event">Evènement</string>
+    <string name="events">Evènements</string>
+    <string name="events_caps">EVÈNEMENTS</string>
+    <string name="distance">Distance</string>
+    <string name="interests">Centres d’interêt</string>
+    <string name="place">Place</string>
+    <string name="validate">Valider</string>
+    <string name="yesterday">Hier</string>
+    <string name="today">Aujourd’hui</string>
+    <string name="plus_members">+25 membres</string>
+    <string name="hint_enter_a_message">Taper un message…</string>
+    <string name="plus_sign">+</string>
+    <string name="modify_account">Modifier compte</string>
+    <string name="setting">Paramètres</string>
+    <string name="terms_conditions">Conditions et termes</string>
+    <string name="logout">Déconnexion</string>
+    <string name="modify_account_informations">Modifier informations du compte</string>
+    <string name="cancel">Annuler</string>
+    <string name="my_interests">Mes centre(s) d’intérêt</string>
+    <string name="join">Joindre</string>
+    <string name="description_caps">DESCRIPTION</string>
+    <string name="activities_caps">ACTIVITÉS</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="participate">Participer</string>
+    <string name="participants">Participants</string>
+    <string name="leave">Quitter</string>
+    <string name="modify_group">Modifier le groupe</string>
+    <string name="modify_event">Modifier l’événement</string>
+    <string name="delete_group">Supprimer le groupe</string>
+    <string name="delete_event">Supprimer l’événement</string>
+    <string name="group_informations">Informations du groupe</string>
+    <string name="group_name">Nom du groupe</string>
+    <string name="location">Localisation</string>
+    <string name="description">Description</string>
+    <string name="new_group_1">Nouveau groupe 1/2</string>
+    <string name="new_group_2">Nouveau groupe 2/2</string>
+    <string name="modif_group_1">Modifier groupe 1/2</string>
+    <string name="modif_group_2">Modifier groupe 2/2</string>
+    <string name="group_interests">Centre(s) d’intérêt du groupe</string>
+    <string name="new_event">Nouvel évènement</string>
+    <string name="date_time">Date et heure</string>
+    <string name="launch_event">Lancer l’évènement</string>
+    <string name="this_month">Ce mois-ci</string>
+    <string name="earlier">Plus tôt</string>
+    <string name="take_picture">Prendre une photo</string>
+    <string name="choose_picture">Choisir une photo</string>
+    <string name="calendar">Calendrier</string>
+    <string name="timeline_fo_the_day">Timeline du jour</string>
+
+    <!-- Preference Titles -->
+    <string name="app_settings">Paramètres de l’application</string>
+    <string name="confidentiality">Confidentialité</string>
+
+    <!-- Confientiality Preferences -->
+    <string name="show_my_groups">Afficher mes groupes</string>
+    <string name="show_my_interests">Afficher mes centres d’interêt</string>
+
+    <!-- Pref Notifications -->
+    <string name="show_notif">Afficher les notifications</string>
+    <string name="messages_header">Messages</string>
+    <string name="modify_date">Modification d’heure ou de lieu</string>
+    <string name="reminder_event">Rappel évènement à venir</string>
+    <string name="notif_groups">Notifications de groupes</string>
+
+    <string name="qst_leave_group">Etes vous sûr de vouloir quitter le groupe</string>
+    <string name="qst_leave_event">Etes vous sûr de vouloir quitter l’évènement</string>
+    <string name="qst_del_group">Etes vous sûr de vouloir supprimer le groupe</string>
+    <string name="qst_del_event">Etes vous sûr de vouloir supprimer l’évènement</string>
+
+    <string name="picture_mandatory">Vous devez choisir une photo</string>
+
+    <string name="internet_required">connexion Internet requise</string>
+    <string name="say_hi">Dites bonjour à votre nouveau groupe</string>
+    <string name="start_by_join_group">Commencez par rejoindre des groupes</string>
+    <string name="picture_message">a envoyer une photo</string>
+    <string name="add_announcement">Ajouter une annonce</string>
+    <string name="announcement_name">Nom de l\'annonce</string>
+    <string name="announcement_content">Contenu de l\'annonce</string>
+
+    <string name="enter_confirm_code">Veuillez entrer le code de confirmation reçu par mail</string>
+    <string name="recover_mail_sent">Un email contant le nouveau mot de passe a été envoyé à votre addresse mail</string>
+    <string name="verify_mail_sent">Un email contant le lien de vérification de votre compte a été envoyé à votre addresse mail</string>
+    <string name="verify_mail">Veuillez vérifier votre addresse mail</string>
+    <string name="verify_account_messages">Veuillez vérifier votre Compte pour accéder à la messagerie</string>
+    <string name="verify">Vérifier</string>
+    <string name="code">Code</string>
+</resources>

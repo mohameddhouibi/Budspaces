@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/ic_dots_settings"
+        app:showAsAction="always"
+        android:title="@string/setting">
+
+        <menu>
+            <item
+                android:id="@+id/action_modify"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/modify_account"/>
+
+            <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/ic_wrench"
+                android:title="@string/setting"/>
+            <item
+                android:id="@+id/action_conditions"
+                android:icon="@drawable/ic_conditions"
+                android:title="@string/terms_conditions"/>
+
+            <item
+                android:id="@+id/action_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logout"/>
+        </menu>
+
+    </item>
+</menu>

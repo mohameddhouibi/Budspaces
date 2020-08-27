@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".Views.Activities.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bnve"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_padding_top"
+        app:layout_constraintBottom_toTopOf="@id/bnve"
+        android:background="@drawable/shadow"/>
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bnve"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:labelVisibilityMode="labeled"
+       app:itemTextColor="@color/bottom_nav_color"
+       app:itemIconTint="@color/bottom_nav_color"
+       app:menu="@menu/menu_navigation"/>
+<!--       app:itemBackground="@drawable/selected_item_background_glow"-->
+</androidx.constraintlayout.widget.ConstraintLayout>

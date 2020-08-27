@@ -1,0 +1,14 @@
+<com.google.android.material.chip.Chip
+    android:id="@+id/chip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    app:chipBackgroundColor="@color/chip_color"
+    app:rippleColor="@color/inactive_field"
+    app:chipStrokeColor="@color/mainBlue"
+    app:chipStrokeWidth="1dp"
+    app:chipCornerRadius="6dp"
+    tools:text="@string/groups"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" />

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Views.Fragments.Settings.DiscoverSettingsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startBoxGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endBoxGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.065"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startBtnGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endBtnGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31"/>
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/BottomGuide"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.9"/>-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/topDistanceGuide"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.47"/>-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topCheckGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.225"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/BottomListGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.765" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar_layout" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/groupCheckbox"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/startBoxGuide"
+        app:layout_constraintTop_toTopOf="@id/topCheckGuide"
+        app:layout_constraintBottom_toBottomOf="@id/topCheckGuide"
+        android:paddingStart="@dimen/appbar_padding_top"
+        android:button="@drawable/custom_checkbox"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="14sp"
+        android:textColor="@color/blue_text"
+        android:text="@string/group"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/eventCheckbox"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_checkbox"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingStart="@dimen/appbar_padding_top"
+        android:text="@string/event"
+        android:textColor="@color/blue_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/endBoxGuide"
+        app:layout_constraintTop_toTopOf="@id/groupCheckbox" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/interestLayout"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="@id/startGuide"
+        app:layout_constraintEnd_toEndOf="@id/endGuide"
+        app:layout_constraintTop_toTopOf="@id/topGuide"
+        android:background="@drawable/input_stroke_light_blue">
+
+        <TextView
+            android:id="@+id/interestTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/activity_vertical_margin"
+            android:gravity="center_vertical"
+            android:drawableEnd="@drawable/ic_dropdown_dark"
+            android:drawablePadding="@dimen/activity_vertical_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:textColor="@color/blue_text"
+            android:hint="@string/interests"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/location"
+        style="@style/TextInputLayoutLocationStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="@string/location"
+        app:layout_constraintEnd_toEndOf="@id/endGuide"
+        app:layout_constraintStart_toStartOf="@id/startGuide"
+        app:layout_constraintTop_toBottomOf="@id/interestLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:inputType="textMultiLine"
+            android:textColor="@color/blue_text"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/distanceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/distance"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/startGuide"
+        app:layout_constraintTop_toBottomOf="@id/location" />
+
+
+    <TextView
+        android:id="@+id/maxDistance"
+        android:layout_width="23dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/arial_bold"
+
+        android:textColor="@color/mainBlue"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/endBoxGuide"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintVertical_bias="0.008"
+        tools:ignore="MissingConstraints"
+        tools:text="5" />
+
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuide"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/startGuide"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTxt"
+        app:layout_constraintVertical_bias="0.2"
+        app:rsb_gravity="center"
+        app:rsb_max="100"
+        app:rsb_mode="single"
+        app:rsb_progress_color="@color/blue_text"
+        app:rsb_progress_default_color="@color/inactive_field"
+        app:rsb_thumb_drawable="@drawable/ic_seekbar_thumb" />
+
+    <carbon.widget.Button
+        android:id="@+id/validate"
+        android:layout_width="197dp"
+        android:layout_height="52dp"
+        android:background="@color/mainRed"
+        android:fontFamily="@font/oswald_bold"
+        android:text="@string/validate"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:carbon_cornerRadius="@dimen/round_radius"
+        app:carbon_elevation="@dimen/low_gap"
+        app:carbon_elevationAmbientShadowColor="@color/mainRed"
+        app:carbon_elevationShadowColor="@color/mainRed"
+        app:carbon_elevationSpotShadowColor="@color/mainRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distance"
+        app:layout_constraintVertical_bias="0.509"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

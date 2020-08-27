@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: nz.bradcampbell:paperparcel-api:2.0.4@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nz.bradcampbell/paperparcel-api/2.0.4/d0389685cd4f34954f91c882e73a30af075a4857/paperparcel-api-2.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nz.bradcampbell/paperparcel-api/2.0.4/e0043d5fb6ed90d11b55db2154c61dd00d5fdbec/paperparcel-api-2.0.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nz.bradcampbell/paperparcel-api/2.0.4/7d0fb30254431452d64b34a528765aa42d646b0b/paperparcel-api-2.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

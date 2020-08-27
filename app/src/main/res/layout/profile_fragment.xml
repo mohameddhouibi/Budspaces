@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Views.Fragments.Main.ProfileFragment">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/profile_fragment_scene">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startBoxGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endBoxGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startTxtGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/home_item_background"
+            app:layout_constraintBottom_toBottomOf="@id/expandedArrow"
+            app:layout_constraintEnd_toEndOf="@id/endBoxGuide"
+            app:layout_constraintStart_toStartOf="@id/startBoxGuide"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/location"
+            app:layout_constraintStart_toStartOf="@id/startTxtGuide">
+
+            <TextView
+                android:id="@+id/nameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/name"
+                android:textColor="@color/notif_blue"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/appbar_padding_top"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/blue_text"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/nameTxt"
+                app:layout_constraintTop_toTopOf="@id/nameTxt"
+                tools:text="Matilda Doe" />
+
+            <TextView
+                android:id="@+id/genreTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/genre"
+                android:textColor="@color/notif_blue"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameTxt" />
+
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/appbar_padding_top"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/blue_text"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/genreTxt"
+                app:layout_constraintTop_toTopOf="@id/genreTxt"
+                tools:text="Femme" />
+
+            <TextView
+                android:id="@+id/birthdateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/birthdate"
+                android:textColor="@color/notif_blue"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genreTxt" />
+
+            <TextView
+                android:id="@+id/birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/appbar_padding_top"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/blue_text"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/birthdateTxt"
+                app:layout_constraintTop_toTopOf="@id/birthdateTxt"
+                tools:text="18 Septembre 19993" />
+
+            <TextView
+                android:id="@+id/countryTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/country"
+                android:textColor="@color/notif_blue"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/birthdateTxt" />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/appbar_padding_top"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/blue_text"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/countryTxt"
+                app:layout_constraintTop_toTopOf="@id/countryTxt"
+                tools:text="United States" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view"
+            tools:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elevation"
+            android:src="@drawable/ic_profile_camera"
+            app:layout_constraintBottom_toBottomOf="@id/picture"
+            app:layout_constraintEnd_toEndOf="@id/picture"
+            app:layout_constraintStart_toEndOf="@id/picture" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/mainRed"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/picture"
+            tools:text="Mathilde" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial_regular"
+            android:textColor="@color/blue_text"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="San Francisco, CA" />
+
+        <ImageView
+            android:id="@+id/expandedArrow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/round_radius"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/expand_arrow"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/groupsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rounded_blue_height"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/groups"
+            android:textColor="@color/blue_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/startGuide"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <TextView
+            android:id="@+id/groupsNb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/appbar_padding_top"
+            android:fontFamily="@font/arial_regular"
+            android:textColor="@color/notif_blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/groupsTxt"
+            app:layout_constraintStart_toEndOf="@id/groupsTxt"
+            tools:text="(16)" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groups"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/startGuide"
+            app:layout_constraintTop_toBottomOf="@id/groupsTxt"
+            android:layout_marginTop="@dimen/round_radius"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_circle_image_67dp" />
+
+        <TextView
+            android:id="@+id/interestsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rounded_blue_height"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/interests"
+            android:textColor="@color/blue_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/startGuide"
+            app:layout_constraintTop_toBottomOf="@id/groups" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chips"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintStart_toStartOf="@id/startGuide"
+            app:layout_constraintEnd_toEndOf="@id/endGuide"
+            app:layout_constraintTop_toBottomOf="@id/interestsTxt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/round_radius"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_profile_chips"/>
+
+        <View
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/appbar_padding_top"
+            app:layout_constraintTop_toBottomOf="@id/chips"/>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.core.widget.NestedScrollView>

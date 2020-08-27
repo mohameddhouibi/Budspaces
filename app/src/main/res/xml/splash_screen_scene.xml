@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/signin"
+            motion:layout_constraintEnd_toEndOf="@id/EndGuide"
+            motion:layout_constraintStart_toEndOf="@id/signup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/BottomGuide"
+            android:layout_marginStart="@dimen/appbar_padding_top"
+            motion:layout_constraintTop_toTopOf="@id/signup">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0.0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/signup"
+            motion:layout_constraintEnd_toStartOf="@id/signin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/BottomGuide"
+            android:layout_marginEnd="@dimen/appbar_padding_top"
+            motion:layout_constraintTop_toTopOf="@id/TopBtnGuide"
+            motion:layout_constraintStart_toStartOf="@id/StartGuide">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/discover"
+            motion:layout_constraintEnd_toEndOf="@id/EndGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="@id/TopGuide">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/signin"
+            motion:layout_constraintEnd_toEndOf="@id/EndGuide"
+            motion:layout_constraintStart_toEndOf="@id/signup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/BottomGuide"
+            android:layout_marginStart="@dimen/appbar_padding_top"
+            motion:layout_constraintTop_toTopOf="@id/signup">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1.0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/signup"
+            motion:layout_constraintEnd_toStartOf="@id/signin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/BottomGuide"
+            android:layout_marginEnd="@dimen/appbar_padding_top"
+            motion:layout_constraintTop_toTopOf="@id/TopBtnGuide"
+            motion:layout_constraintStart_toStartOf="@id/StartGuide">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/discover"
+            motion:layout_constraintEnd_toEndOf="@id/EndGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="@id/TopGuide">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/avi"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/logo"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

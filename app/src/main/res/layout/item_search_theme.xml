@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckBox
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/appbar_padding_top"
+    android:button="@drawable/custom_checkbox"
+    android:fontFamily="@font/roboto_bold"
+    android:textSize="13sp"
+    android:textColor="@color/blue_text"
+    tools:text="People"
+    xmlns:tools="http://schemas.android.com/tools" />

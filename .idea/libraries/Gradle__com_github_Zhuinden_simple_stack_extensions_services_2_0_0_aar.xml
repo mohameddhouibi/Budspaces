@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Zhuinden.simple-stack-extensions:services:2.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2ef56fae3f4ea42a9e2888cad444f16/jetified-services-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2ef56fae3f4ea42a9e2888cad444f16/jetified-services-2.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden.simple-stack-extensions/services/2.0.0/92daa4be9035de4a8e1dc6a461afd3b9c6b661a0/services-2.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden.simple-stack-extensions/services/2.0.0/26c4c9a9720a89a37c69141248ba9450492d5d47/services-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

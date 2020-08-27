@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appBarLayout"
+        layout="@layout/appbar_layout"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.045"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.955"/>
+
+    <TextView
+        android:id="@+id/notificationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/topGuide"
+        app:layout_constraintStart_toStartOf="@id/startGuide"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="14sp"
+        android:textColor="@color/blue_text"
+        android:text="@string/notifications"/>
+
+    <carbon.widget.RecyclerView
+        android:id="@+id/notifications"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationTxt"
+        android:layout_marginHorizontal="@dimen/appbar_padding_top"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:carbon_cornerRadius="@dimen/activity_vertical_margin"
+        android:background="@color/home_item_background"/>
+
+    <TextView
+        android:id="@+id/confidentialityTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/notifications"
+        app:layout_constraintStart_toStartOf="@id/startGuide"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="14sp"
+        android:textColor="@color/blue_text"
+        android:text="@string/confidentiality"/>
+
+    <carbon.widget.RecyclerView
+        android:id="@+id/confidentialities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confidentialityTxt"
+        android:layout_marginHorizontal="@dimen/appbar_padding_top"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:carbon_cornerRadius="@dimen/activity_vertical_margin"
+        android:background="@color/home_item_background"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

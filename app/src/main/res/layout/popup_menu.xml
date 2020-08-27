@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    app:carbon_strokeWidth="@dimen/carbon_1dip"
+    app:carbon_stroke="@color/blue_text"
+    app:carbon_cornerRadius="4dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_popup"/>
+
+</carbon.widget.ConstraintLayout>

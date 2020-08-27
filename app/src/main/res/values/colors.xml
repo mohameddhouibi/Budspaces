@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="mainRed">#FF3B43</color>
+    <color name="outcoming_message_pressed">#F86167</color>
+    <color name="mainBlue">#00EBE2</color>
+    <color name="chip_color">#F5FFFF</color>
+    <color name="inactive_field">#B6F8F6</color>
+    <color name="new_picture_background">#54B6F8F6</color> <!-- 33% -->
+    <color name="home_item_background">#2BB6F8F6</color> <!-- 17% -->
+    <color name="home_new_background">#F3FEFE</color>
+    <color name="blue_text">#081B3B</color>
+    <color name="notif_blue">#2A3E5F</color>
+    <color name="filter_background">#9E081B3B</color>
+    <color name="gray">#8393AD</color>
+    <color name="notif_devider">#EAFFFE</color>
+    <color name="popup_devider">#F1F9FF</color>
+    <color name="shadow_color">#732699FA</color>
+    <color name="group_name_timeline">#7A93BE</color>
+    <color name="chat_date_text">#A0A0A0</color>
+    <color name="home_gray">#888888</color>
+</resources>

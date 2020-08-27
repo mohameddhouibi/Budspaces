@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Zhuinden:state-bundle:1.3.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/26babf5e46460052871802d486167139/jetified-state-bundle-1.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/26babf5e46460052871802d486167139/jetified-state-bundle-1.3.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden/state-bundle/1.3.0/9c63f75ef6407cae312cac213194f5192d752285/state-bundle-1.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zhuinden/state-bundle/1.3.0/1f8fd8ee7a1fd125619e9d630057d24db1699db6/state-bundle-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

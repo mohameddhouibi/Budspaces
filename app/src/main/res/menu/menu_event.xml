@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/ic_dots_settings"
+        app:showAsAction="always"
+        android:title="@string/setting">
+
+        <menu>
+            <item
+                android:id="@+id/action_modify"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/modify_event"/>
+
+            <item
+                android:id="@+id/action_delete"
+                android:icon="@drawable/ic_trash"
+                android:title="@string/delete_event"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Views.Activities.SignUpActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/StartSocialGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.29" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/EndSocialGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/StartGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.065" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/EndGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.935" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/facebook"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/logo_connection"/>
+        <ImageView
+            android:id="@+id/facebook"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/facebook_btn"
+            app:layout_constraintStart_toStartOf="@id/StartSocialGuide"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/facebook"
+            app:layout_constraintEnd_toEndOf="@id/EndSocialGuide"
+            android:src="@drawable/google_plus"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/facebook"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/name"
+            android:layout_marginTop="@dimen/big_space">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            android:layout_marginTop="@dimen/round_radius"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:text="@string/genre"
+                android:drawablePadding="@dimen/appbar_padding_top"
+                android:drawableEnd="@drawable/confidential"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:checked="true"
+                style="@style/RadioButtonStyle"
+                android:fontFamily="@font/arial_bold"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:text="@string/women"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                style="@style/RadioButtonStyle"
+                android:fontFamily="@font/arial_bold"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:text="@string/man"/>
+        </RadioGroup>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/birthday_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="showDatePickerDialog"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/genre"
+            android:layout_marginTop="@dimen/round_radius">
+
+            <TextView
+                android:id="@+id/birthday_hint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/appbar_padding_top"
+                android:drawablePadding="@dimen/appbar_padding_top"
+                android:drawableEnd="@drawable/confidential"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:text="@string/birthdate"/>
+
+            <TextView
+                android:id="@+id/birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/birthday_hint"
+                app:layout_constraintEnd_toStartOf="@id/arrow"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/appbar_padding_top"
+                android:src="@drawable/expand_arrow"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@id/birthday_hint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                android:background="@color/inactive_field"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mail_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/birthday_layout"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/email"
+            android:layout_marginTop="@dimen/round_radius">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/country_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/mail_layout"
+            android:layout_marginTop="@dimen/round_radius"
+            style="@style/TextInputLayoutDropDownStyle"
+            android:hint="@string/country">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/country_layout"
+            android:layout_marginTop="@dimen/round_radius"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirm_pass_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/password_layout"
+            android:layout_marginTop="@dimen/round_radius"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/confirm_password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:textColor="@color/blue_text"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inscription"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            app:layout_constraintStart_toStartOf="@id/StartGuide"
+            app:layout_constraintEnd_toEndOf="@id/EndGuide"
+            app:layout_constraintTop_toBottomOf="@id/confirm_pass_layout"
+            android:layout_marginTop="@dimen/big_space"
+            android:background="@drawable/button_filled">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/oswald_bold"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:text="@string/inscription"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inscription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/round_radius"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="12sp"
+                android:textColor="@color/blue_text"
+                android:text="@string/vous_avez_deja_un_compte"/>
+
+            <TextView
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/text2"
+                app:layout_constraintBottom_toBottomOf="@id/text2"
+                app:layout_constraintStart_toEndOf="@id/text2"
+                android:padding="@dimen/appbar_padding_top"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="12sp"
+                android:textColor="@color/mainRed"
+                android:text="@string/se_connecter"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
